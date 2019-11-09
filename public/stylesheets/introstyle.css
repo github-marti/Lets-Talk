@@ -1,0 +1,172 @@
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .bg-img {
+    /* The image used */
+    background-image: url("../img/communication.jpg");
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .card {    
+      top: 35px !important;
+      font-family: 'Satisfy', cursive;
+      background-color: peachpuff;
+      border-radius: 25px;
+      border: 3px solid gray;
+      padding: 20px; 
+      opacity: 0.9;
+    }
+
+    p {
+        color: darkslategray !important;
+    }
+
+.title {
+    font-size: 1.5rem !important;
+    font-weight: 400 !important;
+    line-height: 1 !important;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    line-height: 1 !important;
+    text-align: right;
+}
+
+.appName {
+    font-family: 'Righteous', cursive;
+    font-size: 4rem !important;
+    color: teal !important;
+    line-height: .5 !important;
+    opacity: 1;
+    text-shadow: 2px 2px white;
+}
+
+.label {
+    color: white !important;
+    font-family: 'Righteous', cursive;
+    font-size: 1rem !important;
+}
+
+.submitButton {
+    font-family: 'Righteous', cursive;
+    color: teal !important;
+    margin-left: 110px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.newUserButton {
+    font-family: 'Righteous', cursive;
+    color: teal !important;
+    margin-left: 60px;
+}
+
+.dropdowns {
+    margin-left: 25px;
+    position: relative;
+    top: 70px !important;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .bg-img {
+        background-image: url("../img/communication.jpg");
+        height: 150%; 
+    }
+    .submitButton {
+        margin-left: 275px !important;
+        margin-top: 25px !important;
+        font-size: 24px;
+    }
+    
+    .newUserButton {
+        margin-left: 200px;
+        font-size: 24px;
+    }
+
+    .card {    
+        margin-bottom: 1px;
+        margin-top: 100px;
+        
+}
+    .appName {
+        font-size: 100px !important;
+        text-align: left;
+    }
+
+    .quote {
+        font-size: 30px !important;
+    }
+
+    .author {
+        font-size: 25px !important;
+        margin-top: 15px !important;
+    }
+
+    #username {
+        margin-bottom: 20px;
+    }
+
+    .label {
+        font-size: 1.5rem !important;
+        padding-top: 5px;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .card {    
+        position: relative;
+        top: -200px !important;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+
+    .appName {
+        font-size: 125px !important;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .quote {
+        font-size: 50px !important;
+    }
+
+    .author {
+        font-size: 35px !important;
+        margin-top: 25px !important;
+    }
+
+    .label {
+        font-size: 2.1rem !important;
+        padding-top: 5px;
+        color:white!important;
+        text-shadow: 3px 3px black;
+    }
+
+    .submitButton {
+        margin-left: 375px !important;
+        margin-top: 0px !important;
+        font-size: 35px;
+    }
+    
+    .newUserButton {
+        margin-left: 260px;
+        font-size: 35px;
+    }
+
+    .field {
+        position: relative;
+        top: -185px;
+    }
+}

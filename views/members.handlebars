@@ -1,0 +1,52 @@
+{{> website-elements/navbar}}
+
+{{#if default}}
+{{> website-elements/main-block}}
+{{else}}
+{{> lists/flashcard-block}}
+{{/if}}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/members.js"></script>
+<script type="text/javascript" src="js/flashcards.js"></script>
+<script>
+
+  var fromButton = document.getElementById('from-button');
+  fromButton.addEventListener('click', function (event) {
+    event.stopPropagation();
+    fromButton.classList.toggle('is-active');
+  });
+
+  var toButton = document.getElementById('to-button');
+  toButton.addEventListener('click', function (event) {
+    event.stopPropagation();
+    toButton.classList.toggle('is-active');
+  });
+
+  var saveToListButton = document.getElementById('save-to-list-button');
+  saveToListButton.addEventListener('click', function (event) {
+    event.stopPropagation();
+    saveToListButton.classList.toggle('is-active');
+  });
+
+  var acc = document.getElementsByClassName("accordion");
+
+  for (let i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  };
+
+  var hideDefaultDiv = document.getElementsByClassName("dontdeletedefault");
+  for (let counter = 0; counter < hideDefaultDiv.length; counter++) {
+    if (hideDefaultDiv[counter].childNodes[1].textContent === "Default") {
+      hideDefaultDiv[counter].nextElementSibling.setAttribute("class", "hideme");
+    }
+  }
+</script>
