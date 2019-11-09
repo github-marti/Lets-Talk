@@ -14,7 +14,6 @@ module.exports = function (app) {
                 }
             })
             .then(response => {
-                console.log("translation", response.data.outputs[0].output);
                 res.send(response.data.outputs[0].output)
             })
             .catch(error => {
