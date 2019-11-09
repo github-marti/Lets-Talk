@@ -186,32 +186,18 @@ $(document).ready(function () {
 
       let queryURLTranslate = `https://systran-systran-platform-for-language-processing-v1.p.rapidapi.com/translation/text/translate?source=${fromLanguage}&target=${toLanguage}&input=${wordSearch}`;
       
-      $.ajax({
-        url: queryURLTranslate,
-        method: "GET",
-        headers: {
-          "x-rapidapi-host": "systran-systran-platform-for-language-processing-v1.p.rapidapi.com",
-          "x-rapidapi-key": "b98198b437mshea0ca9221f948fdp104f05jsneed7015c919a"
-        }
-      }).then(function (response) {
-        console.log(queryURLTranslate);
+      $.get(`/translate/${fromLanguage}/${toLanguage}/${wordSearch}`)
+      .then(function (response) {
         console.log(response);
         let newP = $("<p>");
-        newP.text(response.outputs[0].output);
+        newP.text(response);
         newP.addClass("subtitle");
         newP.attr("id", "translated-word")
         $("#translate").append(newP);
       });
       let queryURLExpression = `https://systran-systran-platform-for-language-processing-v1.p.rapidapi.com/resources/dictionary/lookup?source=${fromLanguage}&target=${toLanguage}&input=${wordSearch}`;
 
-      $.ajax({
-        url: queryURLExpression,
-        method: "GET",
-        headers: {
-          "x-rapidapi-host": "systran-systran-platform-for-language-processing-v1.p.rapidapi.com",
-          "x-rapidapi-key": process.env.API_KEY
-        }
-      }).then(function (response) {
+      $.ajax(`/expressions/${fromLanguage}/${toLanguage}/${wordSearch}`).then(function (response) {
 
         let totalNoOfExpressions = response.outputs[0].output.matches[0].targets[0].expressions.length;
         for (let i = 0; i < totalNoOfExpressions; i++) {
