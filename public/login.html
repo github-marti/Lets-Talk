@@ -6,34 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Let's Talk...</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/login.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <link rel="stylesheet" type="text/css" href="stylesheets/introstyle.css">
-    <link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arvo:400,400i,700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="./js/login.js"></script>
 </head>
 
-<body class="bg-img">
-    <section class="hero is-large is-widescreen">
-        <div class="hero-body">
-            <div class="card">
-                <div class="card-content">
-                    <p class="title quote">
-                        “A different language is a different vision of life.”
-                    </p>
-                    <p class="subtitle author">
-                        -Federico Fellini
-                    </p>
-                    <br>
-                    <p class="appName">
-                        Let's Talk...
-                    </p>
-                </div>
-            </div>
-            <br>
-            <br>
-            <br>
+<body>
+    <div class="head-container">
+        <div class="brand">
+            <h1 class="app-name">
+                Wordlove
+            </h1>
+            <h3 class="app-subtitle">
+                The vocabulary-learning app
+            </h3>
+        </div>
+    </div>
+    <div class="body-container">
+        <div class="form-container">
             <div class="field">
                 <label class="label">Username</label>
                 <div class="control">
@@ -44,18 +36,24 @@
             <div class="field">
                 <label class="label">Password</label>
                 <div class="control">
-                    <input class="input" type="password" id="password" >
+                    <input class="input" type="password" id="password">
                 </div>
             </div>
+        </div>
+        <div class="button-container">
             <div>
-                <button id="submit-btn" class="button is-rounded submitButton">Submit</button>
+                <img id="wordbot" src="img/robot.png">
             </div>
             <div>
-                <a href="/signup.html"><button class="button is-rounded newUserButton">New User? Click Here</button></a>
+                <button id="submit-btn" class="button is-rounded submitButton">Log In</button>
+            </div>
+            <div>
+                <a href="/signup.html"><button class="button is-rounded newUserButton">New User? Click
+                        Here</button></a>
             </div>
         </div>
-    </section>
 
+    </div>
 </body>
 
 </html>

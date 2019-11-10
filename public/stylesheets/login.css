@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    position: relative;
+    margin: 0;
+    height: 100%;
+}
+
+.head-container {
+    background-image: linear-gradient(rgba(12, 69, 155, 0.2), rgba(12, 69, 155, 0.2)), url("../img/blocks.jpg");
+    background-color: #cccccc;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Arvo', serif;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+}
+
+  .form-container {
+    display: block;
+    font-family: 'Arvo', serif;
+    width: 70%;
+    margin: 0 auto;
+    padding: 15px;
+  }
+
+.brand {
+    margin: 0 0 30px 0;
+}
+
+.app-name {
+    font-weight: bold;
+    font-size: 5em;
+    color: white;
+    text-shadow: 4px 4px rgb(30, 73, 192)
+}
+
+.app-subtitle {
+    color: white;
+    font-size: 1.8em;
+}
+
+.body-container {
+    margin-top: 20px;
+}
+
+.label {
+    font-family: 'Arvo', serif !important;
+    font-size: 1.3em;
+    color: rgb(30, 73, 192)
+}
+
+.input {
+    color: rgb(30, 73, 192) !important;
+    border-color: rgb(30, 73, 192) !important;
+}
+
+.button-container {
+    position: relative;
+    text-align: center;
+    margin: 50px auto;
+    width: 70%;
+}
+
+button {
+    font-family: 'Arvo', serif;
+    font-size: 1.3em !important;
+    background-color: rgb(30, 73, 192) !important;
+    color: white !important;
+    font-weight: bold;
+    margin: 10px 0;
+    border-style: none !important;
+}
+
+#wordbot {
+    position: absolute;
+    width: 120px;
+    left: 0;
+    bottom: 20px;
+}
+
+.dropdowns {
+    margin-left: 25px;
+    position: relative;
+    top: 70px !important;
+}
