@@ -30,14 +30,14 @@ body, html {
 
 .app-name {
   font-weight: bold;
-  font-size: 5em;
+  font-size: 3em;
   color: white;
   text-shadow: 4px 4px rgb(30, 73, 192)
 }
 
 .app-subtitle {
   color: white;
-  font-size: 1.8em;
+  font-size: 1.2em;
 }
 
 .body-container {
@@ -46,7 +46,7 @@ body, html {
 
 .label {
   font-family: 'Arvo', serif !important;
-  font-size: 1.3em;
+  font-size: 1em;
   color: rgb(30, 73, 192)
 }
 
@@ -64,7 +64,7 @@ body, html {
 
 button {
   font-family: 'Arvo', serif;
-  font-size: 1.3em !important;
+  font-size: 1em !important;
   background-color: rgb(30, 73, 192) !important;
   color: white !important;
   font-weight: bold;
