@@ -1,255 +1,94 @@
-@media screen and (max-width: 480px) {
-    form.signup,
-    form.login {
-      margin-top: 50px;
-    }
-
-   
-    #main-name{
-      font-family: 'Righteous', cursive;
-
-      margin-left: 65px;
-      margin-top: 10px !important;
-      font-size: 45px;
-      color: teal;
-      text-shadow: 2px 2px white;
-    
-    }
-    
-    #navbarBasicExample{
-      background-color: peachpuff !important;
-    }
-    
-    .sign-form {
-    font-family: 'Righteous', cursive;
-      text-align: center;
-      margin-top: 75px;
-      font-size: 30px;
-      color: teal;
-    }
-
-#email, #username{
-    font-size: 20px;
-    text-align: center;
-    margin-bottom: 10px;
-    font-family: 'Righteous', cursive;
-    color: gray;
+* {
+  box-sizing: border-box;
 }
 
-#email-input, #username-input {
-    width: 300px !important;
-    margin-left: 30px;
-margin-bottom: 30px;
-border-style: solid;
-  border-width: 1px;
-  border-color: gray;
+body, html {
+  position: relative;
+  margin: 0;
+  height: 100%;
 }
 
-#password {
-    font-size: 20px;
-    text-align: center;
-    margin-bottom: 10px;
-    font-family: 'Righteous', cursive;
-    color: gray
-}
-
-#password-input {
-    width: 300px;
-    margin-left: 30px;
-    margin-bottom: 70px;
-    border-style: solid;
-  border-width: 1px;
-  border-color:gray;
-  
-}
-
-.button {
-    margin-left: 125px;
-    font-family: 'Righteous', cursive;
-    font-size: 20px !important;
-    color: teal;
-    background-color: peachpuff;
-    border-radius: 4px;
-    border-style: solid;
-  border-width: 1px;
-  border-color: rgb(161, 155, 155);
-    box-shadow: 10px 10px 5px lightgray;
-}
-
-#login {
-  margin-left: 160px !important;
-}
-}
-
-@media only screen and (min-width: 768px) {
-  form.signup,
-  form.login {
-    margin-top: 50px;
-  }
-
- 
-  #main-name{
-    font-family: 'Righteous', cursive;
-    text-align: center;
-    margin-left: 0px;
-    margin-top: 10px !important;
-    font-size: 60px;
-    color: teal;
-    text-shadow: 2px 2px white;
-  
-  }
-  
-  #navbarBasicExample{
-    background-color: peachpuff !important;
-  }
-  
-  .sign-form {
-  font-family: 'Righteous', cursive;
-    text-align: center;
-    margin-top: 75px;
-    font-size: 40px;
-    color: teal;
-  }
-
-#email, #username{
-  font-size: 30px;
+.head-container {
+  background-color: rgb(30, 73, 192);
+  font-family: 'Arvo', serif;
   text-align: center;
-  margin-bottom: 10px;
-  font-family: 'Righteous', cursive;
-  color: gray;
+  width: 100%;
+  padding: 20px;
 }
 
-#email-input, #username-input {
-  width: 400px !important;
-  margin-left: 200px;
-margin-bottom: 30px;
-border-style: solid;
-border-width: 1px;
-border-color: gray;
+.form-container {
+  display: block;
+  font-family: 'Arvo', serif;
+  width: 70%;
+  margin: 30px auto;
+  padding: 15px;
 }
 
-#password {
-  font-size: 30px;
+.brand {
+  margin: 0 0 30px 0;
+}
+
+.app-name {
+  font-weight: bold;
+  font-size: 5em;
+  color: white;
+  text-shadow: 4px 4px rgb(30, 73, 192)
+}
+
+.app-subtitle {
+  color: white;
+  font-size: 1.8em;
+}
+
+.body-container {
+  margin-top: 20px;
+}
+
+.label {
+  font-family: 'Arvo', serif !important;
+  font-size: 1.3em;
+  color: rgb(30, 73, 192)
+}
+
+.input {
+  color: rgb(30, 73, 192) !important;
+  border-color: rgb(30, 73, 192) !important;
+}
+
+.button-container {
+  position: relative;
   text-align: center;
-  margin-bottom: 10px;
-  font-family: 'Righteous', cursive;
-  color: gray
+  margin: 50px auto;
+  width: 70%;
 }
 
-#password-input {
-  width: 400px;
-  margin-left: 200px;
-  margin-bottom: 70px;
-  border-style: solid;
-border-width: 1px;
-border-color:gray;
-
+button {
+  font-family: 'Arvo', serif;
+  font-size: 1.3em !important;
+  background-color: rgb(30, 73, 192) !important;
+  color: white !important;
+  font-weight: bold;
+  margin: 10px 0;
+  border-style: none !important;
 }
 
-.button {
-  margin-left: 325px;
-  font-family: 'Righteous', cursive;
-  font-size: 30px !important;
-  color: teal;
-  background-color: peachpuff;
-  border-radius: 4px;
-  border-style: solid;
-border-width: 1px;
-border-color: rgb(161, 155, 155);
-  box-shadow: 10px 10px 5px lightgray;
-}
-
-#login {
-margin-left: 375px !important;
-font-size: 20px;
-}
-}
-
-@media only screen and (min-width: 1024px) {
-  form.signup,
-  form.login {
-    margin-top: 50px;
-  }
-
- 
-  #main-name{
-    font-family: 'Righteous', cursive;
-    text-align: center !important;
-    margin-left: 330px;
-    margin-top: 10px !important;
-    font-size: 85px;
-    color: teal;
-    text-shadow: 2px 2px white;
-    padding-top: 20px;
-    padding-bottom: 20px;
-  
-  }
-  
-  #navbarBasicExample{
-    background-color: peachpuff !important;
-  }
-  
-  .sign-form {
-  font-family: 'Righteous', cursive;
-    text-align: center;
-    margin-top: 75px;
-    font-size: 50px;
-    color: teal;
-    margin-bottom: 80px;
-  }
-
-#email, #username{
-  font-size: 40px;
+.control {
   text-align: center;
-  margin-bottom: 10px;
-  font-family: 'Righteous', cursive;
-  color: gray;
 }
 
-#email-input, #username-input {
-  width: 600px !important;
-  margin-left: 200px;
-margin-bottom: 30px;
-border-style: solid;
-border-width: 1px;
-border-color: gray;
+.field a {
+  font-size: 1.3em;
 }
 
-#password {
-  font-size: 40px;
-  text-align: center;
-  margin-bottom: 10px;
-  font-family: 'Righteous', cursive;
-  color: gray
+#wordbot {
+  position: absolute;
+  width: 120px;
+  left: 0;
+  bottom: 20px;
 }
 
-#password-input {
-  width: 600px;
-  margin-left: 200px;
-  margin-bottom: 90px;
-  border-style: solid;
-border-width: 1px;
-border-color:gray;
-
-}
-
-.button {
-  margin-left: 375px;
-  margin-bottom: 20px;
-  font-family: 'Righteous', cursive;
-  font-size: 40px !important;
-  color: teal;
-  background-color: peachpuff;
-  border-radius: 4px;
-  border-style: solid;
-border-width: 1px;
-border-color: rgb(161, 155, 155);
-  box-shadow: 10px 10px 5px lightgray;
-}
-
-#login {
-margin-left: 450px !important;
-font-size: 30px;
-}
-
+.dropdowns {
+  margin-left: 25px;
+  position: relative;
+  top: 70px !important;
 }
