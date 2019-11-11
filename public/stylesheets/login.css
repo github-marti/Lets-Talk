@@ -73,14 +73,14 @@ button {
     color: white !important;
     font-weight: bold;
     margin: 10px 0;
-    border-style: none !important;
+    border: 2px solid white !important;
 }
 
 #wordbot {
     position: absolute;
-    width: 120px;
+    width: 100px;
     left: 0;
-    bottom: 20px;
+    bottom: 3px;
 }
 
 .dropdowns {
