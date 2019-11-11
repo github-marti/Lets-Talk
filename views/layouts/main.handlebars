@@ -2,12 +2,13 @@
 <html lang="en">
 
 <head>
-	<title>Let's Talk</title>
+	<title>WordLove</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Anton|Righteous&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Arvo:400,400i,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,400i,700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
 		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
 	<link href="stylesheets/style.css" rel="stylesheet">
@@ -17,4 +18,56 @@
 	{{{body}}}
 </body>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.7/handlebars.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/flashcards.js"></script>
+<script type="text/javascript" src="js/lists.js"></script>
+<script type="text/javascript" src="js/results.js"></script>
+<script type="text/javascript" src="js/search.js"></script>
+<script type="text/javascript" src="js/browser-bars.js"></script>
+<script>
+	$(document).ready(() => {
+		let templates = [
+			{
+				href: 'hbs/list-display.handlebars',
+				name: 'listDisplay',
+				partial: 'also'     // no, only, also, default no
+			}
+		];
+		$bars.configure(templates);
+	});
+
+	var fromButton = document.getElementById('from-button');
+  fromButton.addEventListener('click', function (event) {
+    event.stopPropagation();
+    fromButton.classList.toggle('is-active');
+  });
+
+  var toButton = document.getElementById('to-button');
+  toButton.addEventListener('click', function (event) {
+    event.stopPropagation();
+    toButton.classList.toggle('is-active');
+  });
+
+  var saveToListButton = document.getElementById('save-to-list-button');
+  saveToListButton.addEventListener('click', function (event) {
+    event.stopPropagation();
+    saveToListButton.classList.toggle('is-active');
+  });
+
+  var acc = document.getElementsByClassName("accordion");
+
+  for (let i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  };
+</script>
 </html>
