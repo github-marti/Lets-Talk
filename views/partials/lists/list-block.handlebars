@@ -1,40 +1,21 @@
-<h1 class="title">Lists</h1>
 <div class="list-container">
-  {{#each vocabLists}}
-  <div class="vocab-list">
-    <div class="accordion">
-
-      <h1 class="subtitle">{{name}}</h1>
-
-    </div>
-
-    <div class="panel word-container">
-      {{#each Vocabs}}
-      {{>vocabs/vocab-block}}
-      {{/each}}
-    </div>
-  </div>
-  {{/each}}
+  <div class="welcome-container">
+    <div id="welcome">your lists :)</div>
+    <img id="welcomebot" src="/img/robot-2.png">
 </div>
-
-{{!-- List for Update/Delete --}}
-<h1 class="title">Update and Delete Lists</h1>
-<div class="list-container">
-  {{#each vocabLists}}
-  <div class="vocab-list">
-    <div class="accordion dontdeletedefault">
-      {{!-- <div class="list-block"> --}}
-      <p class="subtitle">{{name}}</p>
+<div class="all-lists">
+  {{#if vocabLists}}
+    {{#each vocabLists}}
+    <div class="single-list" list-id="{{id}}">
+        <h3>{{name}}</h3>
     </div>
-
-    <div class="panel word-container">
-      <button class="listdeletebutton" data-value={{id}}>Delete</button>
-      <input id={{id}} class="updateinput{{id}}"></input>
-      <button class="listupdatebutton" data-value={{id}}>Update</button>
+    {{/each}}
+  {{else}}
+    <div class="list-error">
+      <h3>You don't have any lists yet!</h3>
+      <p>Go to Word Search to get started.</p>
     </div>
-    {{!-- </div> --}}
-  </div>
-{{/each}}
+  {{/if}}
 </div>
 
 

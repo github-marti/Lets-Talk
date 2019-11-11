@@ -5,4 +5,9 @@ $(document).ready(function () {
     $(".navbar-menu").toggleClass("is-active");
   });
 
+  $(".option-title").on("click", function (event) {
+    event.preventDefault();
+    window.location.href = "/vocablists"
+  });
+
 });

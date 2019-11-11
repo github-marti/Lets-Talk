@@ -1,6 +1,16 @@
 $(document).ready(function () {
 
-$(".listdeletebutton").on("click", function () {
+  $(".single-list").on("click", function(e) {
+    e.preventDefault();
+    let id = $(this).attr("list-id");
+    $("#parent-container").html("");
+    $.get("/api/vocablists/" + id, function(data) {
+      console.log(data[0])
+      $bars.render('listDisplay', 'parent-container', { vocabLists: data[0] });
+    })
+  });
+
+  $(".listdeletebutton").on("click", function () {
     let id = $(this).attr("data-value");
 
     $.ajax("/api/vocabperlist/" + id,
