@@ -1,0 +1,15 @@
+
+<h1 class="title">Update and Delete Lists</h1>
+  {{#each vocabLists}}
+  <div class="vocab-list">
+    <div class="accordion dontdeletedefault">
+      <p class="subtitle">{{name}}</p>
+    </div>
+
+    <div class="panel word-container">
+      <button class="listdeletebutton" data-value={{id}}>Delete</button>
+      <input id={{id}} class="updateinput{{id}}"></input>
+      <button class="listupdatebutton" data-value={{id}}>Update</button>
+    </div>
+  </div>
+  {{/each}}

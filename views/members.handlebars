@@ -1,55 +1,20 @@
 {{> website-elements/navbar}}
-
+<div id="parent-container">
 {{#if default}}
-{{> website-elements/main-block}}
-{{else}}
-{{> lists/flashcard-block}}
+  {{> website-elements/main-block}}
 {{/if}}
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
-<script type="text/javascript" src="js/flashcards.js"></script>
-<script type="text/javascript" src="js/lists.js"></script>
-<script type="text/javascript" src="js/results.js"></script>
-<script type="text/javascript" src="js/search.js"></script>
-<script>
+{{#if listDisplay}}
+  {{> lists/list-block}}
+{{/if}}
 
-  var fromButton = document.getElementById('from-button');
-  fromButton.addEventListener('click', function (event) {
-    event.stopPropagation();
-    fromButton.classList.toggle('is-active');
-  });
+{{#if flashcards}}
+  {{> lists/flashcard-block}}
+{{/if}}
 
-  var toButton = document.getElementById('to-button');
-  toButton.addEventListener('click', function (event) {
-    event.stopPropagation();
-    toButton.classList.toggle('is-active');
-  });
+{{#if translate}}
+  {{> vocabs/search}}
+  {{> vocabs/results}}
+{{/if}}
+</div>
 
-  var saveToListButton = document.getElementById('save-to-list-button');
-  saveToListButton.addEventListener('click', function (event) {
-    event.stopPropagation();
-    saveToListButton.classList.toggle('is-active');
-  });
-
-  var acc = document.getElementsByClassName("accordion");
-
-  for (let i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function () {
-      this.classList.toggle("active");
-      var panel = this.nextElementSibling;
-      if (panel.style.display === "block") {
-        panel.style.display = "none";
-      } else {
-        panel.style.display = "block";
-      }
-    });
-  };
-
-  var hideDefaultDiv = document.getElementsByClassName("dontdeletedefault");
-  for (let counter = 0; counter < hideDefaultDiv.length; counter++) {
-    if (hideDefaultDiv[counter].childNodes[1].textContent === "Default") {
-      hideDefaultDiv[counter].nextElementSibling.setAttribute("class", "hideme");
-    }
-  }
-</script>
