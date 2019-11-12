@@ -25,12 +25,16 @@ module.exports = function (sequelize, DataTypes) {
             }
         },
         difficulty: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: true,
-            validate: {
-                min: 1,
-                max: 3
-            }
+        },
+        definitions: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        notes: {
+            type: DataTypes.STRING,
+            allowNull: true
         }
     });
 
