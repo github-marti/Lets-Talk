@@ -19,23 +19,28 @@ $(document).ready(function () {
         let vocabListId = $("#target-list").attr("list-id");
         let nativelanguage = $("#fromLanguage").text();
         let difficulty = $("input[type=radio][name=answer]:checked").attr("data-value");
+        let definition = $("#add-definition").val();
+        let note = $("#add-note").val();
+    
         let newVocab = {
-            nativeword: nativeWord,
-            nativelanguage: nativelanguage,
-            translatedword: newWord,
-            difficulty: difficulty,
-            LanguageId: newLang,
-            VocabListId: vocabListId
+          nativeword: nativeWord,
+          nativelanguage: nativelanguage,
+          translatedword: newWord,
+          difficulty: difficulty,
+          definition: definition,
+          note: note,
+          LanguageId: newLang,
+          VocabListId: vocabListId
         };
-
+    
         $.post(`/vocab/${newWord}`, newVocab, function (data) {
-            console.log("Word successfully saved");
+          console.log("Word successfully saved");
         });
-
+    
         location.reload();
-    })
-
-    $("#new-list-save").on("click", function () {
+      });
+    
+      $("#new-list-save").on("click", function () {
         let userId = $(".member-username").attr("user-id");
         let newWord = $("#translated-word").text();
         let nativeWord = $("#word").val();
@@ -43,29 +48,31 @@ $(document).ready(function () {
         let newVocabList = $("#new-vocab-list").val();
         let nativelanguage = $("#fromLanguage").text();
         let difficulty = $("input[type=radio][name=answer]:checked").attr("data-value");
+        let definition = $("#add-definition").val();
+        let note = $("#add-note").val();
         let userData = {
-            UserId: userId
+          UserId: userId
         };
-
+    
         $.post(`/vocablist/${newVocabList}`, userData, function (data) {
-            console.log(data.id);
-
-            let newVocab = {
-                nativeword: nativeWord,
-                nativelanguage: nativelanguage,
-                translatedword: newWord,
-                difficulty: difficulty,
-                LanguageId: newLang,
-                VocabListId: data.id
-            };
-
-            $.post(`/vocab/${newWord}`, newVocab, function (data) {
-                console.log(data);
-                console.log("Word successfully saved!");
-            });
-        })
+    
+          let newVocab = {
+            nativeword: nativeWord,
+            nativelanguage: nativelanguage,
+            translatedword: newWord,
+            difficulty: difficulty,
+            definition: definition,
+            note: note,
+            LanguageId: newLang,
+            VocabListId: data.id
+          };
+    
+          $.post(`/vocab/${newWord}`, newVocab, function (data) {
+            console.log("Word successfully saved!");
+          });
+        });
         location.reload();
-    });
+      });
 
     $(".delete").on("click", function () {
         $(".modal").removeClass("is-active");

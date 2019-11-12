@@ -13,9 +13,11 @@ module.exports = function(app) {
         console.log("req", req.body);
         db.Vocab.create({
             nativeword: req.body.nativeword,
-            nativelanguage : req.body.nativelanguage,
+            nativelanguage: req.body.nativelanguage,
             translatedword: req.body.translatedword,
-            difficulty : req.body.difficulty,
+            difficulty: req.body.difficulty,
+            definitions: req.body.definition,
+            notes: req.body.note,
             createdAt: new Date(),
             updatedAt: new Date(),
             UserId: req.body.UserId,
