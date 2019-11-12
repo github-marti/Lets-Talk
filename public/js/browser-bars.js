@@ -17,8 +17,6 @@
         if(html.indexOf('<template>') !== 0) {
           html = `<template>${html}</template>`;
         }
-
-        console.log(html);
   
         fragment = parser.parseFromString(html,'text/html');
   

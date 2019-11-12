@@ -1,8 +1,32 @@
 <div class="list-title">
   {{vocabLists.name}}
-  <div class="vocab-container">
-    {{#each vocabLists.Vocabs}}
+</div>
+<div class="vocab-container">
+  {{#each vocabLists.Vocabs}}
+  <div class="single-vocab accordion">
+    <div class="difficulty-{{difficulty}}"></div>
     {{translatedword}}
-    {{/each}}
   </div>
+  <div class="expanded-vocab">
+    <div class="difficulty-{{difficulty}}"></div>
+    <div class="vocab-content">
+      <p>
+        {{nativelanguage}}: <span class="italics">{{nativeword}}</span>
+      </p>
+      <p>
+        Definitions <i class="fas fa-plus"></i>
+      </p>
+      <p>
+        Notes <i class="fas fa-plus"></i>
+      </p>
+      <p>
+        Difficulty: {{difficulty}}
+      </p>
+    </div>
+    <button id="vocab-delete-btn" vocab-id={{id}}>Delete</button>
+    <div class="choose-difficulty">
+      {{!-- {{>vocabs/difficulty}} --}}
+    </div>
+  </div>
+  {{/each}}
 </div>

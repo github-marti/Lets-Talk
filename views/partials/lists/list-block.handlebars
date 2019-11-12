@@ -2,21 +2,21 @@
   <div class="welcome-container">
     <div id="welcome">your lists :)</div>
     <img id="welcomebot" src="/img/robot-2.png">
-</div>
-<div class="all-lists">
-  {{#if vocabLists}}
+  </div>
+  <div class="all-lists">
+    {{#if vocabLists}}
     {{#each vocabLists}}
     <div class="single-list" list-id="{{id}}">
-        <h3>{{name}}</h3>
+      <h3>{{name}}</h3>
     </div>
     {{/each}}
-  {{else}}
+    {{else}}
     <div class="list-error">
       <h3>You don't have any lists yet!</h3>
       <p>Go to Word Search to get started.</p>
     </div>
-  {{/if}}
-</div>
+    {{/if}}
+  </div>
 
 
-{{!-- end of List for Update.Delete --}}
+  {{!-- end of List for Update.Delete --}}
