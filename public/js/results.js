@@ -41,7 +41,6 @@ $(document).ready(function () {
       });
     
       $("#new-list-save").on("click", function () {
-        let userId = $(".member-username").attr("user-id");
         let newWord = $("#translated-word").text();
         let nativeWord = $("#word").val();
         let newLang = $("#toLanguage").attr("lang-id");
@@ -50,11 +49,8 @@ $(document).ready(function () {
         let difficulty = $("input[type=radio][name=answer]:checked").attr("data-value");
         let definition = $("#add-definition").val();
         let note = $("#add-note").val();
-        let userData = {
-          UserId: userId
-        };
     
-        $.post(`/vocablist/${newVocabList}`, userData, function (data) {
+        $.post(`/vocablist/${newVocabList}`, function (data) {
     
           let newVocab = {
             nativeword: nativeWord,

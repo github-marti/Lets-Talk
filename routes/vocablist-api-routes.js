@@ -32,12 +32,12 @@ module.exports = function(app) {
     })
 
     app.post("/vocablist/:vocablist/", function(req, res) {
-        console.log(req.body);
+        console.log("USER ID:", req.user.id)
         db.VocabList.create({
             name: req.params.vocablist,
             createdAt: new Date(),
             updatedAt: new Date(),
-            UserId: req.body.UserId
+            UserId: req.user.id
         })
         .then(results => {
             res.json(results);

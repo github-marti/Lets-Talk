@@ -117,14 +117,6 @@ body {
   font-style: italic;
 }
 
-.modal {
-  border: 2px solid slategray;
-}
-
-.modal-card-body {
-  min-height: 300px;
-}
-
 .list-save-option {
   margin: 30px 0;
 }
@@ -153,18 +145,12 @@ body {
   text-align: center;
 }
 
-#save-btn {
-  cursor: pointer;
-  font-size: 1.2em;
-  color: hsl(61, 100%, 50%);
-}
-
 .results-header {
   font-family: "Rubik", sans-serif;
   position: relative;
   text-align: center;
   padding: 10px;
-  background: rgb(30, 73, 192);
+  background: gray;
   color: white;
 }
 
@@ -172,6 +158,26 @@ body {
   position: absolute;
   top: 10px;
   right: 10px;
+}
+
+#save-btn {
+  cursor: pointer;
+  font-size: 1.2em;
+  color: hsl(61, 100%, 50%);
+}
+
+.modal-card {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.modal-card-head {
+  font-family: "Arvo", serif;
+  overflow: auto;
+}
+
+.modal-card-body {
+  text-align: center;
 }
 
 .list-container {
@@ -192,24 +198,15 @@ body {
   margin-bottom: 10px;
 }
 
-.single-option:nth-child(3n+1):hover {
-  color: white;
-  background: #1F4ACB;
-}
-
-.single-option:nth-child(3n+2):hover {
-  background: #6FC5DB;
-}
-
-.single-option:nth-child(3n+0):hover {
-  background: #B9E5FC;
-}
-
 .single-option {
   font-size: .8em;
   padding: 10px;
   border-radius: 3px;
   cursor: pointer;
+}
+
+.single-option:hover {
+  background: #ccc;
 }
 
 .single-vocab {
@@ -355,13 +352,7 @@ body {
 }
 
 .radio {
-  font-size: 16px;
-  padding: 5px;
-  border: .5px solid silver;
-  margin-left: 6px;
-  color: black;
   font-family: 'Arvo', serif;
-  font-style: normal;
 }
 
 .panel {
@@ -446,10 +437,6 @@ body {
 
 .active-word {
   display: block;
-}
-
-.modal-card-body {
-  position: relative;
 }
 
 .fc-vocab {
