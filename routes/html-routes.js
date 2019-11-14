@@ -47,14 +47,9 @@ module.exports = function (app) {
         }
       });
 
-      let languageData = await db.Language.findAll();
-
-      console.log('vocablistdata', vocabListData[0]);
-
       if (vocabListData[0]) {
         hbsObject = {
           vocabLists: vocabListData,
-          languages: languageData,
           username: req.user.username,
           userId: req.user.id,
           default: true
@@ -62,7 +57,6 @@ module.exports = function (app) {
       } else {
         hbsObject = {
           vocabLists: false,
-          languages: languageData,
           username: req.user.username,
           userId: req.user.id,
           default: true
@@ -96,22 +90,14 @@ module.exports = function (app) {
         }
       });
 
-      let languageData = await db.Language.findAll();
-
       if (vocabListData[0]) {
         hbsObject = {
           vocabLists: vocabListData,
-          languages: languageData,
-          username: req.user.username,
-          userId: req.user.id,
           listDisplay: true
         }
       } else {
         hbsObject = {
           vocabLists: false,
-          languages: languageData,
-          username: req.user.username,
-          userId: req.user.id,
           listDisplay: true
         }
       }
@@ -121,7 +107,7 @@ module.exports = function (app) {
     };
   });
 
-  app.get("/flashcards", isAuthenticated, async function (req, res) {
+  app.get("/wordsearch", isAuthenticated, async function (req, res) {
     try {
       let vocabListData = await db.VocabList.findAll({
         include: [
@@ -149,16 +135,52 @@ module.exports = function (app) {
         hbsObject = {
           vocabLists: vocabListData,
           languages: languageData,
-          username: req.user.username,
-          userId: req.user.id,
+          wordsearch: true
+        };
+      } else {
+        hbsObject = {
+          vocabLists: false,
+          languages: languageData,
+          wordsearch: true
+        };
+      };
+
+      res.render("members", hbsObject);
+    } catch (error) {
+      console.log(error);
+    }
+  })
+
+  app.get("/flashcards", isAuthenticated, async function (req, res) {
+    try {
+      let vocabListData = await db.VocabList.findAll({
+        include: [
+          {
+            model: db.Vocab,
+            include: [
+              {
+                model: db.Language,
+                attributes: ['name']
+              }
+            ]
+          },
+          {
+            model: db.User,
+          }
+        ],
+        where: {
+          UserId: req.user.id
+        }
+      });
+
+      if (vocabListData[0]) {
+        hbsObject = {
+          vocabLists: vocabListData,
           flashcards: true
         }
       } else {
         hbsObject = {
           vocabLists: false,
-          languages: languageData,
-          username: req.user.username,
-          userId: req.user.id,
           flashcards: true
         }
       }

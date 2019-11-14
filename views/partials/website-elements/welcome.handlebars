@@ -8,7 +8,7 @@
         <div class="option-body">
             {{#if vocabLists}}
             {{#each vocabLists}}
-            <div class="single-list" list-id="{{id}}">
+            <div class="single-option single-list" list-id="{{id}}">
                 <p>{{name}}</p>
             </div>
             {{/each}}
@@ -22,14 +22,14 @@
     <div id="word-search" class="option-chunk">
         <div class="option-title">Word Search</div>
         <div class="option-body">
-            <p>Translate</p>
-            <p>Dictionary Look-up</p>
+            <p class="single-option">Translate</p>
+            <p class="single-option">Dictionary Look-up</p>
         </div>
     </div>
     <div id="practice" class="option-chunk">
         <div class="option-title">Practice</div>
         <div class="option-body">
-            <p>Flashcards</p>
+            <p class="single-option">Flashcards</p>
         </div>
         <p></p>
     </div>

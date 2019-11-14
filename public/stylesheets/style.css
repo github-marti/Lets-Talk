@@ -4,6 +4,7 @@ html {
 
 body {
   position: relative;
+  box-sizing: border-box;
   height: 100%;
 }
 
@@ -88,6 +89,7 @@ body {
 }
 
 .option-title {
+  cursor: pointer;
   background: #B9E5FC;
   padding: 5px 10px;
   font-weight: bold;
@@ -115,10 +117,6 @@ body {
   font-style: italic;
 }
 
-#your-lists .option-title {
-  cursor: pointer;
-}
-
 .modal {
   border: 2px solid slategray;
 }
@@ -139,62 +137,41 @@ body {
 }
 
 .search-container {
-  margin-bottom: 80px;
-}
-
-
-.dropdown-trigger {
-  padding: 0 10px;
-}
-
-.search-bar {
-  display: block;
-  margin: 10px auto;
-  width: 50%
-}
-
-.search-bar input {
-  display: inline-flex;
-  width: 80%;
-}
-
-#search {
-  display: inline-flex;
-  background-color: Transparent;
-  background-repeat:no-repeat;
-  margin: 10px;
-  border: none;
-  cursor:pointer;
-  overflow: hidden;
-  outline:none;
-  float: right;
+  text-align: center;
+  width: 95%;
+  margin: 10px auto 0 auto;
+  border-radius: 3px;
 }
 
 .results-container {
-  position: relative;
   display: none;
-  width: 80%;
-  margin: 20px auto;
-  padding: 15px;
-  background: #bbe7e7;
-  border-radius: 4px;
+  margin: 0 auto;
+  width: 95%;
 }
 
-.results-chunk {
-  margin: 20px 0;
-}
-
-#translation {
-  font-size: 2em;
+.results-container .card-content {
+  text-align: center;
 }
 
 #save-btn {
   cursor: pointer;
-  position: absolute;
-  top: 20px;
-  right: 20px;
   font-size: 1.2em;
   color: hsl(61, 100%, 50%);
+}
+
+.results-header {
+  font-family: "Rubik", sans-serif;
+  position: relative;
+  text-align: center;
+  padding: 10px;
+  background: rgb(30, 73, 192);
+  color: white;
+}
+
+.results-header i {
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 
 .list-container {
@@ -215,20 +192,20 @@ body {
   margin-bottom: 10px;
 }
 
-.single-list:nth-child(3n+1):hover {
+.single-option:nth-child(3n+1):hover {
   color: white;
   background: #1F4ACB;
 }
 
-.single-list:nth-child(3n+2):hover {
+.single-option:nth-child(3n+2):hover {
   background: #6FC5DB;
 }
 
-.single-list:nth-child(3n+0):hover {
+.single-option:nth-child(3n+0):hover {
   background: #B9E5FC;
 }
 
-.single-list {
+.single-option {
   font-size: .8em;
   padding: 10px;
   border-radius: 3px;
@@ -311,32 +288,57 @@ body {
   right: 10px;
 }
 
-.choose-difficulty {
+.search-container .card {
+  background: #ddd;
+}
+
+.dropdown-menu-center {
+  left: 50% !important;
+  right: auto !important;
+  text-align: center !important;
+  transform: translate(-50%, 0) !important;
+}
+
+.dropdown-title {
+  display: inline-flex;
+  font-size: .8em;
+  width: 60px;
+  background: gray;
+  border: 1px solid gray;
+  color: white;
+  justify-content: center;
+  padding-bottom: calc(.5em - 1px);
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: calc(.5em - 1px);
+  margin-right: -5px;
+  text-align: center;
+}
+
+.content .button {
+  font-size: .8em;
+  border-radius: 0 3px 3px 0;
+}
+
+.dropdown-placeholder {
+  font-family: 'Rubik', sans-serif;
+  font-size: .8em;
+}
+
+.dropdown-item {
+  font-family: 'Rubik', sans-serif;
+  font-size: .8em;
+}
+
+#word {
+  font-size: .8em;
+}
+
+.search-bar button {
   margin-top: 20px;
-}
-
-
-#difficulty-1 {
-  background: rgb(43, 202, 128);
-  padding: 10px;
-  border-radius: 4px;
-}
-
-#difficulty-2 {
-  background: rgb(255, 236, 127);
-  padding: 10px;
-  border-radius: 4px;
-}
-
-#difficulty-3 {
-  background: rgb(255, 103, 103);
-  padding: 10px;
-  border-radius: 4px;
-} 
-
-.dropdown {
-  display: block;
-  margin-bottom: 20px;
+  font-size: .8em;
+  background: #616161;
+  color: white;
 }
 
 .title {
@@ -350,16 +352,6 @@ body {
   position: relative;
   bottom: 47px;
   color: white;
-}
-
-
-.subtitle {
-  color: teal;
-  font-size: 1.15rem;
-  font-family: 'Righteous', cursive;
-  line-height: 0;
-  margin-bottom: 15px !important;
-  text-align: center;
 }
 
 .radio {
@@ -412,16 +404,6 @@ body {
 
 .list-block {
   margin-bottom: 30px;
-}
-
-.dropdown-menu-center {
-  left: 50% !important;
-  right: auto !important;
-  text-align: center !important;
-  transform: translate(-50%, 0) !important;
-}
-#word{
-  margin-bottom: 42px;
 }
 
 .fc-container {
