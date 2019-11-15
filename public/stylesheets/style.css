@@ -266,9 +266,14 @@ body {
 }
 
 .vocab-content i {
+  cursor: pointer;
   margin: 5px 5px;
   color: #ccc;
   font-size: .8em;
+}
+
+.vocab-input {
+  display: none;
 }
 
 .small-margin {

@@ -14,11 +14,19 @@
         {{nativelanguage}}: <span class="italics">{{nativeword}}</span>
       </p>
       <p class="small-margin">
-        Definitions <i class="fas fa-plus"></i>
+        Definitions: {{definitions}} <i id="add-definition" class="fas fa-plus"></i>
       </p>
+      <div class="vocab-input">
+        <input id="definition-input" type="text">
+        <button id="save-definition" vocab-id={{id}}>Save</button>
+      </div>
       <p class="small-margin">
-        Notes <i class="fas fa-plus"></i>
+        Notes <i id="add-note" class="fas fa-plus"></i>
       </p>
+      <div class="vocab-input">
+        <input type="text" id="note-input">
+        <button id="save-note" vocab-id={{id}}>Save</button>
+      </div>
       <p class="small-margin">
         Difficulty: <span id="{{id}}-difficulty-span"></span>
       </p>

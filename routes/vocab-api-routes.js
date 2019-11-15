@@ -46,6 +46,18 @@ module.exports = function(app) {
                 }
             }).then(function(results){
                 res.json(results);
+            });
+    });
+
+    app.put("/api/update-definition", function(req, res) {
+        console.log(req.body);
+        db.Vocab.update(req.body,
+            {
+                where: {
+                    id: req.body.id
+                }
+            }).then(function(results) {
+                res.json(results);
             })
     })
 

@@ -27,11 +27,35 @@ $(document).ready(function () {
         };
     });
 
+    $(document).on("click", ".fa-plus", function() {
+        $(this).parent().next().toggle();
+    });
+
+    $(document).on("click", "#save-definition", function() {
+        let definition = $(this).prev().val();
+        let id = $(this).attr("vocab-id");
+        let obj = {
+            id: id,
+            definitions: definition
+        };
+        $.ajax({
+            method: "PUT",
+            url: "/api/update-definition",
+            data: obj
+        }).then(function(res) {
+            let id = $(".list-title").attr("list-id");
+            $("#parent-container").html("");
+            $.get("/api/vocablists/" + id, function (data) {
+                $bars.render('listDisplay', 'parent-container', { vocabLists: data[0] });
+            })
+        })
+    });
+
     $(document).on("click", ".difficulty-option", function () {
         let id = $(this).parent().attr("id").split("-")[0];
         let difficulty = $(this).text().toLowerCase();
 
-        obj = {
+        let obj = {
             id: id,
             difficulty: difficulty
         };
