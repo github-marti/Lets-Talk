@@ -5,7 +5,6 @@ $(document).ready(function () {
     let id = $(this).attr("list-id");
     $("#parent-container").html("");
     $.get("/api/vocablists/" + id, function (data) {
-      console.log(data[0])
       $bars.render('listDisplay', 'parent-container', { vocabLists: data[0] });
     })
   });
@@ -46,7 +45,11 @@ $(document).ready(function () {
       url: "/api/updatelistname",
       data: newName
     }).then(function (res) {
-      location.reload();
+      let id = $(".list-title").attr("list-id");
+      $("#parent-container").html("");
+      $.get("/api/vocablists/" + id, function (data) {
+        $bars.render('listDisplay', 'parent-container', { vocabLists: data[0] });
+      })
     })
   })
 
@@ -60,31 +63,4 @@ $(document).ready(function () {
         location.reload();
       })
   });
-
-  $(".updatebtn").on("click", function () {
-
-    let id = $(this).attr("id");
-    let difficulty = $("input[type=radio][name=answer]:checked").attr("data-value");
-
-    idandnewdiff = {
-      id: id,
-      difficulty: difficulty
-    };
-    $.ajax({
-      method: "PUT",
-      url: "/api/updatevocabdiff",
-      data: idandnewdiff
-    }).then(function (res) {
-      console.log(res);
-      location.reload();
-    });
-  });
-
-  $(document).on("click", ".list-delete-btn", function () {
-    $(".delete-modal").addClass("is-active");
-  });
-
-  // $(".cancel").on("click", function () {
-  //   $(".delete-modal").removeClass("is-active");
-  // });
 });
