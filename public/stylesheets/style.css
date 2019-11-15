@@ -271,6 +271,33 @@ body {
   font-size: .8em;
 }
 
+.small-margin {
+  margin: 10px 0;
+}
+
+.difficulty-option {
+  cursor: pointer;
+}
+
+.easy-text {
+  background: rgb(43, 202, 128);
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.medium-text {
+  background: rgb(255, 236, 127);
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.hard-text {
+  background: rgb(255, 103, 103);
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+}
+
 #vocab-delete-btn {
   position: absolute;
   bottom: 10px;
