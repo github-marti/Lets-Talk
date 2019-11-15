@@ -37,7 +37,7 @@ module.exports = function(app) {
         })
     })
 
-    app.put("/api/updatevocabdiff", function(req, res){
+    app.put("/api/update-difficulty", function(req, res){
         console.log(req.body)
         db.Vocab.update(req.body,
             {
