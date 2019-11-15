@@ -6,7 +6,7 @@
       <button id="list-update" class="list-update-btn" data-value={{vocabLists.id}}>Update Name</button>
     </div>
     <div>
-      <button class="list-delete-btn" data-value={{vocabLists.id}}>Delete List</button>
+      <button class="list-delete-btn">Delete List</button>
     </div>
     <div class="modal delete-modal">
       <div class="modal-background">
@@ -14,7 +14,7 @@
           <div class="modal-card-body">
             <h1>Are you sure you want to delete this list?</h1>
             <div>
-              <button id="list-delete" class="list-delete-btn">I'm sure</button> <button class="list-update-btn cancel">Nevermind</button>
+              <button id="list-delete" class="list-delete-btn" data-value={{vocabLists.id}}>I'm sure</button> <button class="list-update-btn cancel">Nevermind</button>
             </div>
           </div>
         </div>
