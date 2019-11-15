@@ -74,7 +74,7 @@ $(document).ready(function () {
         $(".modal").removeClass("is-active");
     });
 
-    $("#cancel").on("click", function () {
+    $(document).on("click", ".cancel", function () {
         $(".modal").removeClass("is-active");
     });
 });

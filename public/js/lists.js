@@ -1,16 +1,16 @@
 $(document).ready(function () {
 
-  $(".single-list").on("click", function(e) {
+  $(".single-list").on("click", function (e) {
     e.preventDefault();
     let id = $(this).attr("list-id");
     $("#parent-container").html("");
-    $.get("/api/vocablists/" + id, function(data) {
+    $.get("/api/vocablists/" + id, function (data) {
       console.log(data[0])
       $bars.render('listDisplay', 'parent-container', { vocabLists: data[0] });
     })
   });
 
-  $(".listdeletebutton").on("click", function () {
+  $(document).on("click", "#list-delete", function () {
     let id = $(this).attr("data-value");
 
     $.ajax("/api/vocabperlist/" + id,
@@ -28,17 +28,23 @@ $(document).ready(function () {
       })
   })
 
-  $(".listupdatebutton").on("click", function () {
+  $(document).on("click", "#list-update", function () {
     let id = $(this).attr("data-value");
-    let name = $(".updateinput" + id).val();
-    let newobj = {
+    let name = $(".update-input").val();
+
+    if (!name) {
+      console.log("must input name");
+      return;
+    }
+
+    let newName = {
       id: id,
       name: name
     };
     $.ajax({
       method: "PUT",
       url: "/api/updatelistname",
-      data: newobj
+      data: newName
     }).then(function (res) {
       location.reload();
     })
@@ -53,7 +59,7 @@ $(document).ready(function () {
       }).then(function () {
         location.reload();
       })
-  })
+  });
 
   $(".updatebtn").on("click", function () {
 
@@ -73,4 +79,12 @@ $(document).ready(function () {
       location.reload();
     });
   });
+
+  $(document).on("click", ".list-delete-btn", function () {
+    $(".delete-modal").addClass("is-active");
+  });
+
+  // $(".cancel").on("click", function () {
+  //   $(".delete-modal").removeClass("is-active");
+  // });
 });
