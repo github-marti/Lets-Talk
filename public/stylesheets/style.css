@@ -9,10 +9,9 @@ body {
 }
 
 #parent-container {
-  padding-top: 10px;
   height: 100%;
   overflow: auto;
-  background-color:#6FC5DB;
+  background-color:rgb(238, 238, 238)
 }
 
 #main-name{
@@ -52,10 +51,9 @@ body {
 .welcome-container {
   position: relative;
   margin: 0 auto;
-  width: 95%;
+  width: 100%;
   background: white;
   padding: 10px;
-  border-radius: 3px;
 }
 
 #welcome{
@@ -90,15 +88,10 @@ body {
 
 .option-title {
   cursor: pointer;
-  background: #B9E5FC;
+  background: lightblue;
   padding: 5px 10px;
   font-weight: bold;
   font-size: .9em;
-  border-radius: 3px 3px 0 0;
-}
-
-.option-body {
-  padding: 10px;
 }
 
 .list-title {
@@ -130,7 +123,7 @@ body {
 
 .search-container {
   text-align: center;
-  width: 95%;
+  width: 100%;
   margin: 10px auto 0 auto;
   border-radius: 3px;
 }
@@ -189,7 +182,6 @@ body {
 .all-lists {
   width: 95%;
   margin: 10px auto;
-  padding: 10px;
   background: white;
   border-radius: 3px;
 }
@@ -201,12 +193,12 @@ body {
 .single-option {
   font-size: .8em;
   padding: 10px;
-  border-radius: 3px;
   cursor: pointer;
+  border-left: 4px solid white;
 }
 
 .single-option:hover {
-  background: #ccc;
+  border-left: 4px solid #ddd;
 }
 
 .single-vocab {
@@ -216,7 +208,7 @@ body {
   margin: 10px auto 0 auto;
   font-size: 1em;
   text-align: center;
-  background-color: rgb(222, 228, 228);
+  background-color: white;
   padding: 5px;
   border-radius: 3px 3px 0 0;
 }
@@ -285,8 +277,47 @@ body {
   right: 10px;
 }
 
+.list-edit-container {
+  background: white;
+  width: 95%;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+.update-input {
+  height: 25px;
+}
+
+.list-update-btn {
+  cursor: pointer;
+  height: 27px;
+  border: 1px solid #ddd;
+}
+
+.list-delete-btn {
+  cursor: pointer;
+  height: 27px;
+  background: rgb(255, 103, 103);
+  color: white;
+  margin-top: 10px;
+  border-style: none;
+}
+
+.list-delete-btn:hover {
+  background: rgb(179, 63, 63)
+}
+
+.delete-modal .modal-card-body {
+  height: 150px;
+  padding: 30px 10px;
+  margin-top: 50%;
+  border-radius: 5px;
+}
+
 .search-container .card {
-  background: #ddd;
+  background: lightblue;
+  border-radius: 4px;
 }
 
 .dropdown-menu-center {
@@ -300,8 +331,8 @@ body {
   display: inline-flex;
   font-size: .8em;
   width: 60px;
-  background: gray;
-  border: 1px solid gray;
+  background: #616161;
+  border: 1px solid #616161;
   color: white;
   justify-content: center;
   padding-bottom: calc(.5em - 1px);
@@ -338,19 +369,6 @@ body {
   color: white;
 }
 
-.title {
-  font-family: 'Arvo', serif;
-  background-color: teal;
-  font-size: 24px;
-  font-weight: 300;
-  line-height: 1.125;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  position: relative;
-  bottom: 47px;
-  color: white;
-}
-
 .radio {
   font-family: 'Arvo', serif;
 }
@@ -364,12 +382,11 @@ body {
 }
 
 .active, .accordion:hover {
-  background-color: #ccc; 
+  background-color: rgb(212, 212, 212);
 }
 
 .word-container {
   padding: 0 18px;
-  display: none;
   overflow: hidden;
 }
 
@@ -465,6 +482,13 @@ body {
 
 .italics {
   font-style: italic;
+}
+
+.subtitle {
+  font-size: 1em;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
 }
 
 footer {
