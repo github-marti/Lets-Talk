@@ -51,7 +51,7 @@
             if (template.partial !== 'only') {
               Handlebars.templates[template.name] = compiled;
             }
-            if (template.partial === 'also') {
+            if (template.partial === 'also' || template.partial === 'only') {
               Handlebars.registerPartial(template.name, compiled);
               // Handlebars.partials[template.name] = compiled;
             }
