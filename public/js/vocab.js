@@ -40,7 +40,28 @@ $(document).ready(function () {
         };
         $.ajax({
             method: "PUT",
-            url: "/api/update-definition",
+            url: "/api/update-vocab",
+            data: obj
+        }).then(function(res) {
+            let id = $(".list-title").attr("list-id");
+            $("#parent-container").html("");
+            $.get("/api/vocablists/" + id, function (data) {
+                $bars.render('listDisplay', 'parent-container', { vocabLists: data[0] });
+            })
+        })
+    });
+
+    $(document).on("click", "#save-note", function() {
+        let note = $(this).prev().val();
+        console.log('note', note);
+        let id = $(this).attr("vocab-id");
+        let obj = {
+            id: id,
+            notes: note
+        };
+        $.ajax({
+            method: "PUT",
+            url: "/api/update-vocab",
             data: obj
         }).then(function(res) {
             let id = $(".list-title").attr("list-id");
@@ -61,7 +82,7 @@ $(document).ready(function () {
         };
         $.ajax({
             method: "PUT",
-            url: "/api/update-difficulty",
+            url: "/api/update-vocab",
             data: obj
         }).then(function (res) {
             let id = $(".list-title").attr("list-id");

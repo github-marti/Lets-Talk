@@ -11,24 +11,24 @@
     <div class="difficulty-{{difficulty}}"></div>
     <div class="vocab-content">
       <p class="small-margin">
-        {{nativelanguage}}: <span class="italics">{{nativeword}}</span>
+        <span class="bold">{{nativelanguage}}</span>: <span class="italics">{{nativeword}}</span>
       </p>
       <p class="small-margin">
-        Definitions: {{definitions}} <i id="add-definition" class="fas fa-plus"></i>
+        <span class="bold">Definitions</span>: {{definitions}} <i id="add-definition" class="fas fa-plus"></i>
       </p>
       <div class="vocab-input">
         <input id="definition-input" type="text">
         <button id="save-definition" vocab-id={{id}}>Save</button>
       </div>
       <p class="small-margin">
-        Notes <i id="add-note" class="fas fa-plus"></i>
+        <span class="bold">Notes</span>: {{notes}} <i id="add-note" class="fas fa-plus"></i>
       </p>
       <div class="vocab-input">
         <input type="text" id="note-input">
         <button id="save-note" vocab-id={{id}}>Save</button>
       </div>
       <p class="small-margin">
-        Difficulty: <span id="{{id}}-difficulty-span"></span>
+        <span class="bold">Difficulty</span>: <span id="{{id}}-difficulty-span"></span>
       </p>
     </div>
     <button id="vocab-delete-btn" vocab-id={{id}}>Delete</button>

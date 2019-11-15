@@ -37,7 +37,7 @@ module.exports = function(app) {
         })
     })
 
-    app.put("/api/update-difficulty", function(req, res){
+    app.put("/api/update-vocab", function(req, res){
         console.log(req.body)
         db.Vocab.update(req.body,
             {
@@ -48,18 +48,6 @@ module.exports = function(app) {
                 res.json(results);
             });
     });
-
-    app.put("/api/update-definition", function(req, res) {
-        console.log(req.body);
-        db.Vocab.update(req.body,
-            {
-                where: {
-                    id: req.body.id
-                }
-            }).then(function(results) {
-                res.json(results);
-            })
-    })
 
     app.delete("/api/vocabperlist/:id", function(req,res){
         db.Vocab.destroy({
