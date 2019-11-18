@@ -35,12 +35,11 @@ $(document).ready(function () {
         let definition = $(this).prev().val();
         let id = $(this).attr("vocab-id");
         let obj = {
-            id: id,
             definitions: definition
         };
         $.ajax({
             method: "PUT",
-            url: "/api/update-vocab",
+            url: `/api/vocab/${id}`,
             data: obj
         }).then(function(res) {
             let id = $(".list-title").attr("list-id");
@@ -53,15 +52,13 @@ $(document).ready(function () {
 
     $(document).on("click", "#save-note", function() {
         let note = $(this).prev().val();
-        console.log('note', note);
         let id = $(this).attr("vocab-id");
         let obj = {
-            id: id,
             notes: note
         };
         $.ajax({
             method: "PUT",
-            url: "/api/update-vocab",
+            url: `/api/vocab/${id}`,
             data: obj
         }).then(function(res) {
             let id = $(".list-title").attr("list-id");
@@ -77,12 +74,11 @@ $(document).ready(function () {
         let difficulty = $(this).text().toLowerCase();
 
         let obj = {
-            id: id,
             difficulty: difficulty
         };
         $.ajax({
             method: "PUT",
-            url: "/api/update-vocab",
+            url: `/api/vocab/${id}`,
             data: obj
         }).then(function (res) {
             let id = $(".list-title").attr("list-id");
@@ -90,6 +86,20 @@ $(document).ready(function () {
             $.get("/api/vocablists/" + id, function (data) {
                 $bars.render('listDisplay', 'parent-container', { vocabLists: data[0] });
             })
+        });
+    });
+
+    $(document).on("click", "#vocab-delete-btn", function () {
+        let id = $(this).attr("vocab-id");
+        $.ajax({
+            method: "DELETE",
+            url: `/api/vocab/${id}`
+        }).then(function (res) {
+            let id = $(".list-title").attr("list-id");
+            $("#parent-container").html("");
+            $.get("/api/vocablists/" + id, function (data) {
+                $bars.render('listDisplay', 'parent-container', { vocabLists: data[0] });
+            });
         });
     });
 

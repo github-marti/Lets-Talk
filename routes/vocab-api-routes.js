@@ -9,7 +9,7 @@ module.exports = function(app) {
         });
     });
 
-    app.post("/vocab/:vocab/", function(req, res) {
+    app.post("/api/vocab", function(req, res) {
         console.log("req", req.body);
         db.Vocab.create({
             nativeword: req.body.nativeword,
@@ -29,31 +29,22 @@ module.exports = function(app) {
         });
     });
 
-    app.delete("/api/vocabs/:id", function(req,res){
-        db.Vocab.destroy ({
-            where: {id : req.params.id}
-        }).then(function(results) {
-            res.json(results);
-        })
-    })
-
-    app.put("/api/update-vocab", function(req, res){
-        console.log(req.body)
+    app.put("/api/vocab/:id", function(req, res){
         db.Vocab.update(req.body,
             {
                 where : {
-                    id : req.body.id
+                    id : req.params.id
                 }
             }).then(function(results){
                 res.json(results);
             });
     });
 
-    app.delete("/api/vocabperlist/:id", function(req,res){
-        db.Vocab.destroy({
-            where : {VocabListId : req.params.id}
-        }).then(function(results){
+    app.delete("/api/vocab/:id", function(req,res){
+        db.Vocab.destroy ({
+            where: {id : req.params.id}
+        }).then(function(results) {
             res.json(results);
-        })
-    })
+        });
+    });
 };

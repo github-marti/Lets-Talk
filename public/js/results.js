@@ -33,7 +33,7 @@ $(document).ready(function () {
           VocabListId: vocabListId
         };
     
-        $.post(`/vocab/${newWord}`, newVocab, function (data) {
+        $.post('/api/vocab', newVocab, function (data) {
           console.log("Word successfully saved");
         });
     
@@ -63,7 +63,7 @@ $(document).ready(function () {
             VocabListId: data.id
           };
     
-          $.post(`/vocab/${newWord}`, newVocab, function (data) {
+          $.post('/api/vocab', newVocab, function (data) {
             console.log("Word successfully saved!");
           });
         });
