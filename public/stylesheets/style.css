@@ -516,6 +516,10 @@ body {
   font-style: italic;
 }
 
+a {
+  color: inherit;
+}
+
 .subtitle {
   font-size: 1em;
   margin-bottom: 15px;
