@@ -52,10 +52,10 @@ module.exports = function(app) {
         })
     })
 
-    app.put("/api/updatelistname", function(req,res){
+    app.put("/api/vocablist/:id", function(req,res){
         db.VocabList.update(req.body,
             {
-                where : {id : req.body.id}
+                where : {id : req.params.id}
             }).then(function(results){
                 res.json(results);
             })

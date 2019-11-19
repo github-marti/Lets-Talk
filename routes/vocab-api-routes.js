@@ -47,4 +47,12 @@ module.exports = function(app) {
             res.json(results);
         });
     });
+
+    app.delete("/api/allvocabs/:id", function(req, res) {
+        db.Vocab.destroy ({
+            where: {VocabListId: req.params.id}
+        }).then(function(results) {
+            res.json(results);
+        });
+    });
 };

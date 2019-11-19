@@ -12,18 +12,18 @@ $(document).ready(function () {
   $(document).on("click", "#list-delete", function () {
     let id = $(this).attr("data-value");
 
-    $.ajax("/api/vocabperlist/" + id,
+    $.ajax(`/api/allvocabs/${id}`,
       {
         method: "DELETE"
       }).then(function () {
-        location.reload();
+        window.location = "/vocablists";
       })
 
-    $.ajax("/api/vocablist/" + id,
+    $.ajax(`/api/vocablist/${id}`,
       {
         method: "DELETE"
       }).then(function () {
-        location.reload();
+        window.location = "/vocablists";
       })
   })
 
@@ -37,12 +37,11 @@ $(document).ready(function () {
     }
 
     let newName = {
-      id: id,
       name: name
     };
     $.ajax({
       method: "PUT",
-      url: "/api/updatelistname",
+      url: `/api/vocablist/${id}`,
       data: newName
     }).then(function (res) {
       let id = $(".list-title").attr("list-id");
