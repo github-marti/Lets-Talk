@@ -390,7 +390,7 @@ body {
 
 .dropdown-title {
   display: inline-flex;
-  font-size: .8em;
+  font-size: 1em;
   width: 60px;
   background: #616161;
   border: 1px solid #616161;
