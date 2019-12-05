@@ -68,7 +68,7 @@ body {
   text-align: center;
   color: rgb(30, 73, 192);
   font-family: 'Rubik', sans-serif;
-  font-size: 1em;
+  font-size: 1.3em;
   margin: 0 auto;
 }
 
@@ -108,7 +108,7 @@ body {
   background: lightblue;
   padding: 5px 10px;
   font-weight: bold;
-  font-size: .9em;
+  font-size: 1.2em;
 }
 
 .teal {
@@ -122,7 +122,7 @@ body {
 .list-title {
   font-family: 'Arvo', serif;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.8em;
   font-weight: bold;
   margin: 0 auto;
   color: rgb(30, 73, 192);
@@ -130,7 +130,7 @@ body {
 }
 
 .list-error {
-  font-size: .8em;
+  font-size: 1em;
   padding: 5px 0;
   font-style: italic;
 }
@@ -180,7 +180,7 @@ body {
 
 #save-btn {
   cursor: pointer;
-  font-size: 1.2em;
+  font-size: 1.5em;
   color: hsl(61, 100%, 50%);
 }
 
@@ -217,7 +217,7 @@ body {
 }
 
 .single-option {
-  font-size: .8em;
+  font-size: 1em;
   padding: 10px;
   cursor: pointer;
   border-left: 4px solid white;
