@@ -233,7 +233,7 @@ body {
   font-family: 'Rubik', 'san-serif';
   width: 95%;
   margin: 10px auto 0 auto;
-  font-size: 1em;
+  font-size: 1.3em;
   text-align: center;
   background-color: white;
   padding: 5px;
@@ -403,7 +403,7 @@ body {
 }
 
 .content .button {
-  font-size: .8em;
+  font-size: 1.3em;
   border-radius: 0 3px 3px 0;
 }
 
@@ -423,7 +423,7 @@ body {
 
 .search-bar button {
   margin-top: 20px;
-  font-size: .8em;
+  font-size: 1.3em;
   background: #616161;
   color: white;
 }
@@ -546,7 +546,7 @@ a {
 }
 
 .subtitle {
-  font-size: 1em;
+  font-size: 1.3em;
   margin-bottom: 15px;
   padding-bottom: 10px;
   border-bottom: 1px solid #ddd;
