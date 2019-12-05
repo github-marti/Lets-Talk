@@ -279,8 +279,13 @@ body {
   border-radius: 0 0 3px 3px;
 }
 
+.expanded-vocab input {
+  font-size: 1em;
+}
+
 .expanded-vocab button {
   font-family: 'Rubik', 'san-serif';
+  font-size: 1em;
   padding: 5px;
   background: #ccc;
   border-style: none;
@@ -300,7 +305,6 @@ body {
 }
 
 .vocab-input {
-  font-size: 1em;
   display: none;
 }
 
