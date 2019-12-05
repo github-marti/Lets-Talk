@@ -1,9 +1,11 @@
+<div class="welcome-container">
+    <div id="welcome">Flashcards >:)</div>
+    <img id="welcomebot" src="/img/robot-2.png">
+</div>
 <div class="fc-container">
-    <h1 class="fc-title">Flashcards</h1>
-
-    <p>Choose the list you would like to practice:</p>
+    <p class="option-title">Choose the list you would like to practice:</p>
     {{#each vocabLists}}
-    <div class="fc-list-option" list-id="{{id}}">
+    <div class="single-option" list-id="{{id}}">
         <h1>{{name}}</h1>
     </div>
     {{/each}}

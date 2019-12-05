@@ -24,6 +24,14 @@ body {
   text-shadow: 4px 4px rgb(30, 73, 192)
 }
 
+.navbar-link {
+  color: white;
+}
+
+.navbar-item {
+  padding: 5px 10px;
+}
+
 .navbar-burger {
   font-size: 2em;
   color: white;
@@ -86,12 +94,29 @@ body {
   border-radius: 5px;
 }
 
+.option-jumbo {
+  color: white;
+  width: 95%;
+  margin: 10px auto;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
 .option-title {
   cursor: pointer;
   background: lightblue;
   padding: 5px 10px;
   font-weight: bold;
   font-size: .9em;
+}
+
+.teal {
+  background: teal;
+}
+
+.blue {
+  background: rgb(30, 73, 192);
 }
 
 .list-title {
@@ -171,6 +196,7 @@ body {
 
 .modal-card-body {
   text-align: center;
+  padding: 0;
 }
 
 .list-container {
@@ -447,7 +473,9 @@ body {
 }
 
 .fc-container {
-  text-align: center;
+  margin: 20px auto;
+  background: white;
+  width: 95%;
 }
 
 .fc-list-option {
@@ -457,10 +485,7 @@ body {
 
 .fc-list-option h1 {
   margin: 15px 0;
-  color: teal;
-  text-transform: uppercase;
   font-size: 1.15rem;
-  font-family: 'Righteous', cursive;
 }
 
 .fc-list-option h1:hover {
@@ -469,11 +494,10 @@ body {
 }
 
 .fc-title {
-  margin: 15px 0;
   color: black;
-  text-transform: uppercase;
   font-size: 2rem;
-  font-family: 'Righteous', cursive;
+  padding: 30px;
+  border-radius: 5px;
 }
 
 .fc-current-translated {
@@ -496,15 +520,15 @@ body {
   bottom: 0;
 }
 
-.fc-difficulty-1 {
+.fc-difficulty-easy {
   background: rgb(43, 202, 128);
 }
 
-.fc-difficulty-2 {
+.fc-difficulty-medium {
   background: rgb(255, 236, 127);
 }
 
-.fc-difficulty-3 {
+.fc-difficulty-hard {
   background: rgb(255, 103, 103);
 }
 

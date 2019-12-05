@@ -4,7 +4,9 @@
 </div>
 <div class="options-container">
     <div id="your-lists" class="option-chunk">
-        <a href="/vocablists"><div class="option-title">Your Lists</div></a>
+        <a href="/vocablists">
+            <div class="option-title">Your Lists</div>
+        </a>
         <div class="option-body">
             {{#if vocabLists}}
             {{#each vocabLists}}
@@ -19,18 +21,14 @@
             {{/if}}
         </div>
     </div>
-    <div id="word-search" class="option-chunk">
-        <a href="/wordsearch"><div class="option-title">Word Search</div></a>
-        <div class="option-body">
-            <p class="single-option">Translate</p>
-            <p class="single-option">Dictionary Look-up</p>
+    <a href="/wordsearch">
+        <div id="word-search" class="option-jumbo teal">
+            <h1 class="bold">Word Search</h1>
         </div>
-    </div>
-    <div id="practice" class="option-chunk">
-        <a href="/flashcards"><div class="option-title">Practice</div></a>
-        <div class="option-body">
-            <p class="single-option">Flashcards</p>
+    </a>
+    <a href="/flashcards">
+        <div id="practice" class="option-jumbo blue">
+            <h1 class="bold">Flashcards</h1>
         </div>
-        <p></p>
-    </div>
+    </a>
 </div>

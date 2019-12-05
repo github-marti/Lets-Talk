@@ -2,7 +2,7 @@ function getVocab(listId) {
     return $.get(`/api/vocablists/${listId}`)
 }
 
-$(".fc-list-option").on("click", async function () {
+$(".fc-container > .single-option").on("click", async function () {
     
     let listId = $(this).attr("list-id");
     let data = await getVocab(listId);
