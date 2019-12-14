@@ -34,6 +34,7 @@ $(document).ready(function () {
           newP.attr("id", "translated-word");
           $(".loader").toggle();
           $("#translate").append(newP);
+          $('#save-btn').toggle();
         })
         .catch(function (error) {
           console.log(error);
