@@ -18,6 +18,8 @@ $(document).ready(function () {
     let fromLanguage = $("#fromLanguage").attr("lang-code");
     let toLanguage = $("#toLanguage").attr("lang-code");
     let wordSearch = $("#word").val();
+    $(".results-container").attr("style", "display:block");
+    $(".loader").toggle();
 
     if (wordSearch && toLanguage) {
       $("#translate").html("");
@@ -29,9 +31,9 @@ $(document).ready(function () {
           let newP = $("<p>");
           newP.text(response);
           newP.addClass("subtitle");
-          newP.attr("id", "translated-word")
+          newP.attr("id", "translated-word");
+          $(".loader").toggle();
           $("#translate").append(newP);
-          $(".results-container").attr("style", "display:block");
         })
         .catch(function (error) {
           console.log(error);
