@@ -8,5 +8,9 @@ The saved vocabulary can be assigned a difficulty (easy, medium, or hard), user-
 WordLove also offers a simple flashcard functionality so users can practice their customized lists.
 
 
+# Deployed Page
+https://wordlove.herokuapp.com/
+
+
 # Languages
 HTML, CSS, JavaScript, Handlebars, Node.js, Express, MySQL
